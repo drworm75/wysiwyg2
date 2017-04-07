@@ -57,7 +57,6 @@ var famousPeople =	[
 
 function editBio(){
 	var clickedCard = $(".clicked").find("span").text();
-	console.log(clickedCard);
 	$("#user-input-field").val(clickedCard);
 }					
 
