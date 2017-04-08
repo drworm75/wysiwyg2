@@ -74,9 +74,10 @@ function copyText(event) {
 $.each (famousPeople, function (index,value) {
 	index += 1;
 	$("#card-holder").append(`<person class="card">`);
-	$(".card:nth-of-type(" + index + ")").append(`<header><h2>${value.title} ${value.name}<h2></header>`);
-	$(".card:nth-of-type(" + index + ")").append(`<section><span>${value.bio}</span><br><img src=${value.image}></section>`);
-	$(".card:nth-of-type(" + index + ")").append(`<footer><h3>Born: ${value.lifespan.birth}<br>Died: ${value.lifespan.death}</h3></footer>`);
+	var newCard = $(".card:nth-of-type(" + index + ")")
+	newCard.append(`<header><h2>${value.title} ${value.name}<h2></header>`);
+	newCard.append(`<section><span>${value.bio}</span><br><img src=${value.image}></section>`);
+	newCard.append(`<footer><h3>Born: ${value.lifespan.birth}<br>Died: ${value.lifespan.death}</h3></footer>`);
 });
 
 $("person").addClass("person__container");
